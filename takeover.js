@@ -1,4 +1,5 @@
 /** @param {NS} ns */
+<<<<<<< HEAD
 export async function main(ns) {
 	var init_scan = ns.scan();
 	for (var i of init_scan){
@@ -8,3 +9,12 @@ export async function main(ns) {
 		finally{}
 	}
 }
+=======
+init_scan = ns.scan();
+export async function main(ns) {
+	for (i of init_scan){
+		ns.exec("junk.js");
+		ns.wget();
+	}
+}
+>>>>>>> cc9705542b7df50a44bd0ffc9b0360e8e88ce5ff
