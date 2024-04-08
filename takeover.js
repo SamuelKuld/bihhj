@@ -4,9 +4,9 @@ export async function main(ns) {
 	for (var i of init_scan) {
 		try {
 			ns.nuke(i);
-			await ns.wget("https://github.com/SamuelKuld/bihhj/raw/main/takeover.js", "junk.js", i);
+			await ns.wget("https://raw.githubusercontent.com/SamuelKuld/bihhj/main/takeover.js", "junk.js", i);
 			ns.exec("junk.js", i);
 		}
-		finally { }
+		finally { continue }
 	}
 }
